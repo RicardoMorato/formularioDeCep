@@ -1,14 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Example } from './components';
-import './App.scss';
+import Label from './components';
 
 function App() {
-  return (
-    <section className="app">
-      <Example />
-    </section>
-  );
+  return <Label labelName="Cu de curioso" />;
 }
 
 ReactDOM.render(<App />, document.getElementById('root'));
