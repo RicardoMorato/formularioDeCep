@@ -1,9 +1,9 @@
 {
-  "name": "citi-reactplate",
+  "name": "formulario-de-cep",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/CITi-UFPE/citi-reactplate.git",
-  "author": "Edgar Marques <edgarmarques.110@gmail.com>",
+  "repository": "https://github.com/RicardoMorato/formularioDeCep",
+  "author": "Ricardo Morato <https://github.com/RicardoMorato>",
   "license": "MIT",
   "scripts": {
     "start": "react-scripts start",
