@@ -6,6 +6,11 @@ import './Form.scss';
 
 export default function Form() {
   const [zipCode, setZipCode] = useState('');
+  const [street, setStreet] = useState('Rua');
+  const [neiborhood, setNeiborhood] = useState('Bairro');
+  const [city, setCity] = useState('Cidade');
+  const [state, setState] = useState('Estado');
+  const [IBGE, setIBGE] = useState('IBGE');
 
   const handleChange = async (e) => {
     const regZipCode = e.target.value.replace(/([.-])/g, '');
@@ -13,7 +18,13 @@ export default function Form() {
 
     if (zipCode.length === 8) {
       const res = await axiosGet(regZipCode);
-      console.log(res.data);
+      if (res.status === 200) {
+        setStreet(res.data.logradouro);
+        setNeiborhood(res.data.bairro);
+        setCity(res.data.localidade);
+        setState(res.data.uf);
+        setIBGE(res.data.ibge);
+      }
     }
   };
 
@@ -26,15 +37,15 @@ export default function Form() {
     <div className="form">
       <Input cep handleChange={handleChange} />
 
-      <Input cep={false} other="Rua" />
+      <Input cep={false} other={street} />
 
-      <Input cep={false} other="Bairro" />
+      <Input cep={false} other={neiborhood} />
 
-      <Input cep={false} other="Cidade" />
+      <Input cep={false} other={city} />
 
-      <Input cep={false} other="Estado" />
+      <Input cep={false} other={state} />
 
-      <Input cep={false} other="IBGE" />
+      <Input cep={false} other={IBGE} />
 
     </div>
   );
