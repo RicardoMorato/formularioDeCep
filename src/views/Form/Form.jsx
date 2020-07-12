@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import VMasker from 'vanilla-masker';
 import { Input } from '../../components';
 import './Form.scss';
 
@@ -8,6 +9,12 @@ export default function Form() {
   const handleChange = (e) => {
     setZipCode(e.target.value);
   };
+
+  useEffect(() => {
+    const cepInput = document.querySelector('.Cep');
+
+    VMasker(cepInput).maskPattern('99.999-999');
+  }, []);
 
   return (
     <div className="form">

@@ -18,7 +18,18 @@ export default function Input({ cep, other, handleChange }) {
 
   return (
     cep
-      ? <TextField label="CEP" id="standard-basic" onChange={handleChange} />
-      : <TextField label={other} id="filled-basic" disabled />
+      ? (
+        <TextField
+          label="CEP"
+          id="standard-basic"
+          onChange={handleChange}
+          inputProps={
+        {
+          className: 'Cep',
+        }
+      }
+        />
+      )
+      : <TextField label={other} disabled />
   );
 }
