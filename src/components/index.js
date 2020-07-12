@@ -1,3 +1,7 @@
 import Label from './Label';
+import Input from './Input';
 
-export default Label;
+export {
+  Label,
+  Input,
+};

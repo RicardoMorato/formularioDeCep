@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Label from './components';
+import Form from './views';
 
 function App() {
-  return <Label labelName="Cu de curioso" />;
+  return (
+    <Form />
+  );
 }
 
 ReactDOM.render(<App />, document.getElementById('root'));
