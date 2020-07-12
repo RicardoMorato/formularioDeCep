@@ -1,21 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Input } from '../../components';
 import './Form.scss';
 
 export default function Form() {
+  const [zipCode, setZipCode] = useState('');
+
+  const handleChange = (e) => {
+    setZipCode(e.target.value);
+  };
+
   return (
     <div className="form">
-      <Input cep="true" />
+      <Input cep handleChange={handleChange} />
 
-      <Input cep="" other="Rua" />
+      <Input cep={false} other="Rua" />
 
-      <Input cep="" other="Bairro" />
+      <Input cep={false} other="Bairro" />
 
-      <Input cep="" other="Cidade" />
+      <Input cep={false} other="Cidade" />
 
-      <Input cep="" other="Estado" />
+      <Input cep={false} other="Estado" />
 
-      <Input cep="" other="IBGE" />
+      <Input cep={false} other="IBGE" />
 
     </div>
   );

@@ -1,4 +1,10 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .form {
+  background-color: #e6e6e7;
   min-height: 100vh;
   min-width: 100vw;
   display: flex;
