@@ -34,7 +34,7 @@ export default function Form() {
   }, []);
 
   return (
-    <div className="form">
+    <section className="form">
       <Input cep handleChange={handleChange} />
 
       <Input cep={false} other={street} />
@@ -46,7 +46,6 @@ export default function Form() {
       <Input cep={false} other={state} />
 
       <Input cep={false} other={IBGE} />
-
-    </div>
+    </section>
   );
 }

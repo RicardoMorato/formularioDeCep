@@ -1,7 +1,7 @@
-import Label from './Label';
+import Header from './Header';
 import Input from './Input';
 
 export {
-  Label,
+  Header,
   Input,
 };
