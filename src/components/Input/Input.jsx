@@ -22,7 +22,7 @@ export default function Input({ cep, other, handleChange }) {
         <TextField
           label="CEP"
           id="standard-basic"
-          onChange={handleChange}
+          onKeyUp={handleChange}
           inputProps={
         {
           className: 'Cep',
