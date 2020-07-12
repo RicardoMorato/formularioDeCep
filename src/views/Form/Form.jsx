@@ -18,7 +18,7 @@ export default function Form() {
 
     if (zipCode.length === 8) {
       const res = await axiosGet(regZipCode);
-      if (res.status === 200) {
+      if (!res.data.erro) {
         setStreet(res.data.logradouro);
         setNeiborhood(res.data.bairro);
         setCity(res.data.localidade);
